@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student dashboard | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="dashboard" data-protected="true">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Your study space</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="profile.html" data-page="profile">My profile</a><button class="nav-logout" id="logout-button" type="button">Log out</button>
+  </div></nav>
+  <main class="dashboard-layout">
+    <aside class="sidebar" aria-label="Student navigation">
+      <a href="dashboard.html">Dashboard</a><a href="materials.html">Browse materials</a><a href="upload.html">Upload a PDF</a><a href="profile.html">My profile</a>
+    </aside>
+    <div class="dashboard-main">
+      <section class="welcome-panel"><p class="eyebrow">Student dashboard</p><h1 id="welcome">Welcome back</h1><p class="muted">Keep learning, share what works, and find your next useful resource.</p><p id="student-context" class="student-context"></p></section>
+      <section class="grid" aria-label="Your activity" style="margin-top:18px">
+        <article class="stat"><span class="stat-value" id="total-materials">0</span><span class="stat-label">Available materials</span></article>
+        <article class="stat"><span class="stat-value" id="my-uploads">0</span><span class="stat-label">Your uploads</span></article>
+        <article class="stat"><span class="stat-value" id="my-downloads">0</span><span class="stat-label">Materials downloaded</span></article>
+        <article class="stat"><span class="stat-value" id="saved-count">0</span><span class="stat-label">Saved materials</span></article>
+      </section>
+      <div class="section-heading"><div><p class="eyebrow">Quick navigation</p><h2>What would you like to do?</h2></div></div>
+      <div class="hero-actions"><a class="button" href="materials.html">Explore materials</a><a class="button button-secondary" href="saved.html">Saved materials</a><a class="button button-secondary" href="upload.html">Upload a PDF</a><a class="button button-secondary" href="profile.html">View profile</a></div>
+      <div class="section-heading"><div><p class="eyebrow">For your campus</p><h2>Materials from your college</h2></div><a href="materials.html">Explore all materials</a></div>
+      <section id="college-materials" class="material-list" aria-live="polite"></section>
+      <div class="section-heading"><div><p class="eyebrow">Your contributions</p><h2>Your uploaded materials</h2></div><a href="upload.html">Upload a PDF</a></div>
+      <section id="my-uploaded-materials" class="material-list" aria-live="polite"></section>
+      <div class="section-heading"><div><p class="eyebrow">Keep your resources close</p><h2>Downloaded materials</h2></div></div>
+      <section id="downloaded-materials" class="material-list" aria-live="polite"></section>
+    </div>
+  </main>
+  <footer>Edu Share Hub · Student community</footer>
+</body>
+</html>

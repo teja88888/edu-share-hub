@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My student profile | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="profile" data-protected="true">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Your student profile</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="profile.html" data-page="profile">My profile</a><button class="nav-logout" id="logout-button" type="button">Log out</button>
+  </div></nav>
+  <main>
+    <section class="panel">
+      <p class="eyebrow">Your account</p><h1>My profile</h1>
+      <div id="profile-details" class="profile-details"></div>
+      <div class="actions"><button class="action" id="edit-profile" type="button">Edit profile</button><button class="button button-secondary" id="logout-button-copy" type="button">Log out</button></div>
+      <form id="profile-editor" class="hidden" style="margin-top:22px">
+        <div class="form-grid">
+          <div><label for="edit-name">Student name</label><input id="edit-name" name="name" required></div>
+          <div>
+            <label for="edit-college-select">College</label><select id="edit-college-select" required><option value="">Select a college</option></select>
+            <div id="edit-college-custom-field" class="hidden"><label for="edit-college-custom">Add a new college</label><input id="edit-college-custom" name="college-custom"></div>
+          </div>
+          <div>
+            <label for="edit-location">Current location (optional)</label>
+            <div class="location-control"><input id="edit-location" name="location" placeholder="Use the button to share your coordinates"><button class="button button-secondary" type="button" data-location-target="edit-location">Use my current location</button></div>
+            <p id="edit-location-message" class="small location-message" role="status" aria-live="polite">Location stays in this browser profile. Your browser will ask permission.</p>
+          </div>
+          <div><label for="edit-roll">Roll number</label><input id="edit-roll" name="roll" required></div>
+          <div><label for="edit-department">Department / branch</label><input id="edit-department" name="department" required></div>
+          <div><label for="edit-year">Year</label><input id="edit-year" name="year" required></div>
+          <div><label for="edit-semester">Semester</label><input id="edit-semester" name="semester" required></div>
+          <div><label for="edit-phone">Phone</label><input id="edit-phone" name="phone" type="tel" required></div>
+        </div>
+        <button class="action" type="submit">Save changes</button><p id="profile-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <div class="section-heading"><div><p class="eyebrow">Your contributions</p><h2>My uploaded PDFs</h2></div><a href="upload.html">Upload material</a></div>
+    <section id="my-materials" class="material-list"></section>
+  </main>
+  <footer>Edu Share Hub</footer>
+</body>
+</html>

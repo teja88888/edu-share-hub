@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore study materials | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="materials">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Explore student-shared resources</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="index.html" data-page="home">Home</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a><a href="account.html" data-page="account">Register</a><a href="login.html" data-page="login">Login</a><a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="upload.html" data-page="upload">Upload PDF</a>
+  </div></nav>
+  <main>
+    <section class="panel">
+      <p class="eyebrow">Student study library</p><h1>Explore materials</h1>
+      <p class="muted">Find materials by name or subject, and narrow results to a college or subject. This browser-only demo does not share uploads across devices or colleges.</p>
+      <div class="filters">
+        <div class="filter-field"><label for="search">Search materials</label><input id="search" type="search" placeholder="Search title, department, semester, or uploader..." aria-label="Search by material title, department, semester, or uploader"></div>
+        <div class="filter-field"><label for="college-filter">Search or select college</label><input id="college-filter" type="search" list="college-options" placeholder="Type a college name..." aria-label="Search or select a college"><datalist id="college-options"></datalist></div>
+        <div class="filter-field"><label for="subject-filter">Search or select subject</label><input id="subject-filter" type="search" list="subject-options" placeholder="Type a subject..." aria-label="Search or select a subject"><datalist id="subject-options"></datalist></div>
+      </div>
+      <section id="material-list" class="material-list" aria-live="polite"></section>
+    </section>
+  </main>
+  <footer>Edu Share Hub · Study together</footer>
+</body>
+</html>

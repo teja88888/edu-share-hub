@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student registration | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="account">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Your student learning community</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="index.html" data-page="home">Home</a><a href="login.html" data-page="login">Login</a><a href="account.html" data-page="account">Register</a><a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a>
+  </div></nav>
+  <main>
+    <section class="form-block narrow">
+      <p class="eyebrow">Join the community</p><h1>Create your student account</h1>
+      <p class="muted">Add your college details to discover and share study materials.</p>
+      <form id="register-form">
+        <label for="student-name">Student name</label><input id="student-name" name="name" autocomplete="name" required>
+        <label for="college-select">College</label>
+        <select id="college-select" required><option value="">Select a college</option></select>
+        <div id="college-custom-field" class="hidden">
+          <label for="college-custom">Add your college</label><input id="college-custom" name="college-custom" autocomplete="organization">
+        </div>
+        <p class="small">Choose a listed college or select “Add a new college”.</p>
+        <label for="student-location">Current location (optional)</label>
+        <div class="location-control"><input id="student-location" name="location" placeholder="Use the button to share your coordinates"><button class="button button-secondary" type="button" data-location-target="student-location">Use my current location</button></div>
+        <p id="student-location-message" class="small location-message" role="status" aria-live="polite">Location stays in this browser profile. Your browser will ask permission.</p>
+        <label for="roll">Roll number</label><input id="roll" name="roll" autocomplete="off" required>
+        <label for="department">Department / branch</label><input id="department" name="department" placeholder="e.g. Computer Science" required>
+        <div class="form-grid">
+          <div><label for="year">Year</label><select id="year" name="year" required><option value="">Select year</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Other</option></select></div>
+          <div><label for="semester">Semester</label><select id="semester" name="semester" required><option value="">Select semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option><option>Semester 7</option><option>Semester 8</option><option>Other</option></select></div>
+        </div>
+        <label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Used to log in" required>
+        <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="new-password">Password</label><input id="new-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <p class="small">This demo stores account details in your browser only. Use a password you don't use elsewhere.</p>
+        <button class="action" type="submit">Create account</button>
+        <p id="register-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small form-footer">Already registered? <a href="login.html">Log in to your account</a></p>
+    </section>
+  </main>
+  <footer>Edu Share Hub</footer>
+</body>
+</html>

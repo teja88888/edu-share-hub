@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saved materials | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="saved" data-protected="true">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Your saved study resources</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="profile.html" data-page="profile">My profile</a><button class="nav-logout" id="logout-button" type="button">Log out</button>
+  </div></nav>
+  <main>
+    <section class="panel">
+      <p class="eyebrow">Your personal study list</p>
+      <h1>Saved materials</h1>
+      <p class="muted">Keep useful PDFs here so you can return to them later. Only your account in this browser can see this list.</p>
+      <section id="saved-materials" class="material-list" aria-live="polite"></section>
+    </section>
+  </main>
+  <footer>Edu Share Hub · Your saved resources</footer>
+</body>
+</html>

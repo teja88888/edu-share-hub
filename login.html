@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student login | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="login">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Welcome back to your learning community</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="index.html" data-page="home">Home</a><a href="login.html" data-page="login">Login</a><a href="account.html" data-page="account">Register</a><a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a>
+  </div></nav>
+  <main>
+    <section class="form-block narrow">
+      <p class="eyebrow">Student access</p><h1>Log in to Edu Share Hub</h1>
+      <p class="muted">Use your email, phone number, or roll number.</p>
+      <form id="login-form">
+        <label for="identifier">Email / phone / roll number</label><input id="identifier" name="identifier" autocomplete="username" required>
+        <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+        <section id="face-check" class="face-check" aria-labelledby="face-check-title">
+          <h2 id="face-check-title">Front-camera face check</h2>
+          <p class="small">Scan your face before logging in. This demo checks only whether a face is visible; it does not identify you or verify your identity. Camera frames are processed in this browser and are not saved or sent. Camera access requires HTTPS or localhost.</p>
+          <video id="face-video" class="face-video" autoplay muted playsinline aria-label="Front camera preview"></video>
+          <button class="action" id="start-face-check" type="button">Scan face with front camera</button>
+          <p id="face-message" class="form-message" role="status" aria-live="polite"></p>
+        </section>
+        <button class="action" id="login-submit" type="submit" disabled>Log in</button>
+        <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <button class="link-button" id="forgot-password" type="button">Forgot password?</button>
+      <p class="small form-footer">New here? <a href="account.html">Register as a student</a></p>
+    </section>
+  </main>
+  <footer>Edu Share Hub</footer>
+</body>
+</html>

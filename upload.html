@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload study PDF | Edu Share Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="upload" data-protected="true">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Edu<span class="brand-mark">Share</span> Hub</a><span class="header-tagline">Share a helpful resource</span></div></header>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+    <a href="dashboard.html" data-page="dashboard">Dashboard</a><a href="materials.html" data-page="materials">Explore materials</a><a href="saved.html" data-page="saved">Saved materials</a><a href="upload.html" data-page="upload">Upload PDF</a><a href="profile.html" data-page="profile">My profile</a><button class="nav-logout" id="logout-button" type="button">Log out</button>
+  </div></nav>
+  <main>
+    <section class="upload-panel narrow">
+      <p class="eyebrow">Help another student</p><h1>Upload study material</h1>
+      <p class="muted">Add the PDF details so students using this browser can find it by subject, college, or department. India-wide sharing requires a hosted server and shared database.</p>
+      <form id="upload-form">
+        <label for="title">Material title</label><input id="title" name="title" placeholder="e.g. Data Structures - Unit 1 Notes" required>
+        <label for="subject-search">Search or enter a subject</label>
+        <input id="subject-search" name="subject" list="subject-options" placeholder="Type a subject, e.g. Data Structures" autocomplete="off" required>
+        <datalist id="subject-options"></datalist>
+        <p class="small">Type to search existing subjects, or enter a new subject name.</p>
+        <label for="college-select">College</label>
+        <select id="college-select" required><option value="">Select a college</option></select>
+        <div id="college-custom-field" class="hidden">
+          <label for="college-custom">Add a new college</label><input id="college-custom" name="college-custom" autocomplete="organization">
+        </div>
+        <label for="material-location">Current location (optional)</label>
+        <div class="location-control"><input id="material-location" name="location" placeholder="Add your location or use the button"><button class="button button-secondary" type="button" data-location-target="material-location">Use my current location</button></div>
+        <p id="material-location-message" class="small location-message" role="status" aria-live="polite">Optional. Add a location only if you want it shown with this PDF; your browser will ask permission.</p>
+        <label for="department">Department / branch</label><input id="department" name="department" required>
+        <label for="semester">Year and semester</label><input id="semester" name="semester" placeholder="e.g. 2nd year · Semester 3" required>
+        <label for="file">PDF file (maximum 2 MB)</label><input id="file" name="file" type="file" accept="application/pdf,.pdf" required>
+        <p class="small">Your PDF is saved in this browser under your student name. It is not shared with other devices. Avoid sensitive documents.</p>
+        <button class="action" type="submit">Upload PDF</button>
+        <p id="upload-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer>Edu Share Hub</footer>
+</body>
+</html>
